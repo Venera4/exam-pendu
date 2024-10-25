@@ -1,4 +1,5 @@
-import pygame
+"""import pygame"""
+
 import math
 import random
 from solver import generate_valid_words, generate_best_letters
