@@ -17,11 +17,11 @@ def lire_filtrer_mots(chemin_lexique, longueur):
     Lit les mots depuis le fichier source (par exemple data/liste_mots.txt) et applique un filtre pour retourner une liste de mots d'une longueur donnée en supprimant les accents, les espaces, et les tirets et éliminant les doublons
     
     Args: 
-    chemin_lexique(str): Chemin d'accès au fichier de lexique contenant les mots
-    longueur(int): Longueur des mots
+      chemin_lexique(str): Chemin d'accès au fichier de lexique contenant les mots
+      longueur(int): Longueur des mots
     
     Returns:
-    une liste Python contenant uniquement les mots valides en majuscule ayant la taille spécifiée.
+      une liste Python contenant uniquement les mots valides en majuscule ayant la taille spécifiée.
     """
     liste_mots=set()
     with open(chemin_lexique,"r") as f:
