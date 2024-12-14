@@ -7,13 +7,14 @@ def generate_valid_words(possible_words, letters_in_secret, letters_not_in_secre
   Permet d'obtenir la liste des mots encore valides en fonction des lettres déjà jouées
  
   Args:
-  possible_words [list(str)]: La liste des mots potentiellement valides (par exemple, au départ, tous les mots d'une longueur donnée).
-  letters_in_secret [list(tuple)]: Une liste de tuples représentant les lettres déjà trouvées par l'utilisateur ainsi que leur position dans le mot.
-  letters_not_in_secret [list(str)]: Une liste des lettres déjà essayées par l'utilisateur mais qui ne sont pas dans le mot.
+    possible_words [list(str)]: La liste des mots potentiellement valides (par exemple, au départ, tous les mots d'une longueur donnée).
+    letters_in_secret [list(tuple)]: Une liste de tuples représentant les lettres déjà trouvées par l'utilisateur ainsi que leur position dans le mot.
+    letters_not_in_secret [list(str)]: Une liste des lettres déjà essayées par l'utilisateur mais qui ne sont pas dans le mot.
 
   Returns:
-  List[str]: La liste des mots encore valides
+    List[str]: La liste des mots encore valides
   '''
+  
   mot_valides=[]
   for word in possible_words:
     valid=False
@@ -35,13 +36,13 @@ def generate_best_letters(possible_words:list, letters_not_played:list[str], let
   Suggère à l'utilisateur quelle lettre jouer ensuite, en se basant sur la liste des mots valides générée par generate_valid_words 
     
   Args:
-  possible_words [list(str)]: La liste des mots encore en jeu après application des règles de generate_valid_words.
-  letters_not_played [list(str)]: Une liste de lettres que l'utilisateur n'a pas encore essayées.
-  letters_in_secret [list(str)]: La liste des lettres correctement placées dans le mot, avec leurs positions.
-  letters_not_in_secret [list(str)]: La liste des lettres qui ne sont pas dans le mot.
+    possible_words [list(str)]: La liste des mots encore en jeu après application des règles de generate_valid_words.
+    letters_not_played [list(str)]: Une liste de lettres que l'utilisateur n'a pas encore essayées.
+    letters_in_secret [list(str)]: La liste des lettres correctement placées dans le mot, avec leurs positions.
+    letters_not_in_secret [list(str)]: La liste des lettres qui ne sont pas dans le mot.
 
   Returns:
-  str: une suggestion qui est directement affichée dans le jeu pour guider l'utilisateur vers la meilleure lettre à jouer.
+    str: une suggestion qui est directement affichée dans le jeu pour guider l'utilisateur vers la meilleure lettre à jouer.
   '''
   letter_occur = Counter(letter for word in possible_words for letter in word)     
   options={}              
