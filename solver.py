@@ -27,8 +27,6 @@ def generate_valid_words(possible_words, letters_in_secret, letters_not_in_secre
   return mot_valides
 
 
-
-
 def generate_best_letters(possible_words:list, letters_not_played:list[str], letters_in_secret, letters_not_in_secret):
     
   '''
@@ -56,7 +54,7 @@ def generate_best_letters(possible_words:list, letters_not_played:list[str], let
         max_key = max(options, key=options.get)
         return (f"La meilleure lettre à jouer: {max_key}")
   else:
-        print("No valid letters to choose from.")
+        print("Aucune lettre valide à jouer")
         return None
 
 
